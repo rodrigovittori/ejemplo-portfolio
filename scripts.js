@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Cargar íconos de habilidades
-  const skills = [
-    "html", "css", "javascript", "typescript", "react", "node", "express", "mongodb",
-    "mysql", "postgresql", "java", "csharp", "python", "apache", "bash", "git", "docker"
-  ];
+  const skills = [ "html5", "css3", "javascript", "csharp", "dotnet",
+                   "mysql", "java", "apache", "spring", "python" ];
 
   const skillsContainer = document.getElementById("skills-container");
   skills.forEach(skill => {
@@ -16,41 +14,35 @@ document.addEventListener("DOMContentLoaded", () => {
     skillsContainer.appendChild(img);
   });
 
-  // Cargar proyectos desde data.json
-  fetch("data.json")
-    .then(res => res.json())
-    .then(data => {
-      const carrusel = document.getElementById("carrusel-proyectos");
-      data.forEach(proyecto => {
-        const card = document.createElement("div");
-        card.className = "proyecto";
+  // Datos embebidos porque GitHub Pages no permite fetch local
+const proyectos = [
+  {
+    titulo: "App Genérica",
+    descripcion: "App para e-commerce con autenticación de usuarios y catálogo de productos.",
+    imagen: "projects/images/img_proy_1_1.png",
+    enlace: "https://github.com/rodrigovittori/tp-winform-equipo-c"
+  },
+  {
+    titulo: "Sistema de Gestión Club Sportivo Pecho Frío",
+    descripcion: "App de gestión para una asociación independiente que permite registrar socios, eventos y pagos asociados en forma eficiente.",
+    imagen: "projects/images/img_proy_2_1.png",
+    enlace: "https://github.com/rodrigovittori/"
+  }
+];
 
-        card.innerHTML = `
-          <h3>${proyecto.titulo}</h3>
-          <p>${proyecto.descripcion}</p>
-          ${proyecto.imagen ? `<img src="${proyecto.imagen}" alt="${proyecto.titulo}" />` : ""}
-          <a href="${proyecto.enlace}" target="_blank">Ver proyecto</a>
-        `;
+const carrusel = document.getElementById("carrusel-proyectos");
+proyectos.forEach(proyecto => {
+  const card = document.createElement("div");
+  card.className = "proyecto";
 
-        carrusel.appendChild(card);
-      });
-    })
-    .catch(err => {
-      console.error("Error al cargar proyectos:", err);
-    });
+  card.innerHTML = `
+    <h3>${proyecto.titulo}</h3>
+    <p>${proyecto.descripcion}</p>
+    ${proyecto.imagen ? `<img src="${proyecto.imagen}" alt="${proyecto.titulo}" />` : ""}
+    <a href="${proyecto.enlace}" target="_blank">Ver proyecto</a>
+  `;
 
-  // Carrusel navegación básica
-  const btnPrev = document.querySelector(".btn-prev");
-  const btnNext = document.querySelector(".btn-next");
-  const carrusel = document.getElementById("carrusel-proyectos");
+  carrusel.appendChild(card);
+});
 
-  let scrollAmount = 0;
-
-  btnPrev.addEventListener("click", () => {
-    carrusel.scrollBy({ left: -300, behavior: "smooth" });
-  });
-
-  btnNext.addEventListener("click", () => {
-    carrusel.scrollBy({ left: 300, behavior: "smooth" });
-  });
 });
