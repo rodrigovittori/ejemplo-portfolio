@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Vittori | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="topnav">
+      <ul>
+        <li><a href="#aptitudes">Aptitudes</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="presentacion">
+    <div class="foto-perfil biselada">
+      <img src="profile.jpg" alt="Foto de perfil" />
+    </div>
+    <div class="bio">
+      <h1>Rodrigo Vittori</h1>
+      <h2 class="subtitulo">Desarrollador Backend</h2>
+      <p>Soy un desarrollador apasionado por crear soluciones eficientes, centrado en la lógica, el rendimiento y la calidad del software.</p>
+      <div class="info-sidebar">
+        <a href="https://www.linkedin.com/in/rodrigo-vittori/" target="_blank">
+          <img src="linked-in.png" alt="LinkedIn" width="24" height="24" />LinkedIn
+        </a>
+        <a href="https://github.com/rodrigovittori" target="_blank">
+          <img src="github.png" alt="GitHub" width="24" height="24" />GitHub
+        </a>
+        <a href="modelo-cv.pdf" target="_blank">Ver CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="aptitudes">
+    <h2>Aptitudes</h2>
+    <div class="skills" id="skills-container">
+      <!-- íconos cargados dinámicamente desde JS -->
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="carrusel-container">
+      <button class="btn-prev">&#9664;</button>
+      <div class="carrusel" id="carrusel-proyectos"></div>
+      <button class="btn-next">&#9654;</button>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="form-contacto">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Rodrigo Vittori</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

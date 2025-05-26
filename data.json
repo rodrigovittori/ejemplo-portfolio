@@ -1,0 +1,29 @@
+[
+  {
+    "titulo": "App Genérica",
+    "descripcion": "App para e-commerce con autenticación de usuarios y catálogo de productos.",
+    "link": "https://github.com/rodrigovittori/tp-winform-equipo-c",
+    "imagenes": ["img_proy_1_1.png"],
+    "tecnologias": [
+      { "nombre": "C#", "icono": "csharp.svg" },
+      { "nombre": "WinForms", "icono": "winforms.svg" },
+      { "nombre": "SQL", "icono": "sql.svg" },
+      { "nombre": ".NET", "icono": "net.svg" }
+    ]
+  },
+
+  {
+    "titulo": "Sistema de Gestión Club Sportivo Pecho Frío",
+    "descripcion": "App de gestión para una asociación independiente que permite registrar socios, eventos y pagos asociados en forma eficiente.",
+    "link": "https://github.com/rodrigovittori/",
+    "imagenes": ["img_proy_2_1.png", "img_proy_2_2.png", "img_proy_2_3.png", "img_proy_2_4.png", "img_proy_2_5.png"],
+    "tecnologias": [
+      { "nombre": "Python", "icono": "python.svg" },
+      { "nombre": "HTML 5", "icono": "html5.svg" },
+      { "nombre": "Javascript", "icono": "js.svg" },
+      { "nombre": "CSS", "icono": "css.svg" },
+      { "nombre": "SQL", "icono": "sql.svg" }
+    ]
+  }
+
+]
